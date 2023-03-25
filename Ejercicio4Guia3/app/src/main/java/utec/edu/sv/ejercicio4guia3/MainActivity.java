@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     Integer contador = 0, pares = 0;
     Integer numPositivos = 0,  numNegativos = 0, cantMultiplos = 0;
 
+    Button agregar;
+
     String data1="", data2="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         edtNum = findViewById(R.id.edtNumber);
         tv1 = findViewById(R.id.tvTotalIngresado);
         tv2 = findViewById(R.id.tvResultado);
+        agregar = findViewById(R.id.button);
     }
 
     public void procesar(View view){
@@ -48,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         contador++;
         tv1.setText("Cantidad de numeros ingresados: "+contador.toString());
         tv2.setText("Total numeros positivos: "+numPositivos+"\nTotal numeros negativos: "+numNegativos+"\nLa suma de numeros pares es: "+pares+"\nCantidad de numeros multiplo de 15: "+cantMultiplos);
-        if(contador > 10){
-            return;
+        if(contador == 10){
+            agregar.setEnabled(true);
         }
     }
 }

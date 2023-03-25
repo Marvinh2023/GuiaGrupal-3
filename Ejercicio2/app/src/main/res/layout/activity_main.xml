@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="247dp"
+            android:layout_height="48dp"
+            android:text="Ingrese un numero positivo"
+            android:textAlignment="center"
+            android:textColor="#376F88"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/edtNumero"
+            app:layout_constraintEnd_toEndOf="@+id/edtNumero"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtNumero"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.593" />
+
+        <EditText
+            android:id="@+id/edtNumero"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:ems="10"
+            android:hint="Ingrese el numero aca..."
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="#0C0C0C"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.528"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.342" />
+
+        <TextView
+            android:id="@+id/twMensaje"
+            android:layout_width="235dp"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:textColor="#590E0E"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnMensaje"
+            app:layout_constraintEnd_toEndOf="@+id/edtNumero"
+            app:layout_constraintStart_toStartOf="@+id/edtNumero"
+            app:layout_constraintTop_toBottomOf="@+id/edtNumero" />
+
+        <Button
+            android:id="@+id/btnMensaje"
+            android:layout_width="112dp"
+            android:layout_height="69dp"
+            android:onClick="Mensaje"
+            android:text="Mostrar mensaje"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/edtNumero"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="@+id/edtNumero"
+            app:layout_constraintTop_toBottomOf="@+id/edtNumero"
+            app:layout_constraintVertical_bias="0.595" />
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="107dp"
+            android:layout_height="71dp"
+            android:text="Limpiar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/edtNumero"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/edtNumero"
+            app:layout_constraintTop_toBottomOf="@+id/edtNumero"
+            app:layout_constraintVertical_bias="0.599" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

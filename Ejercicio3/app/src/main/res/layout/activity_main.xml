@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="246dp"
+            android:layout_height="39dp"
+            android:text="Ingresa 10 numeros:"
+            android:textAlignment="center"
+            android:textColor="#074A80"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.092" />
+
+        <EditText
+            android:id="@+id/edtNumeros"
+            android:layout_width="259dp"
+            android:layout_height="53dp"
+            android:ems="10"
+            android:hint="Ingresa los numeros aca..."
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.031" />
+
+        <TextView
+            android:id="@+id/twNumsAgregados"
+            android:layout_width="257dp"
+            android:layout_height="31dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="@+id/btnAgregarNums"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnAgregarNums"
+            app:layout_constraintTop_toBottomOf="@+id/btnAgregarNums"
+            app:layout_constraintVertical_bias="0.634" />
+
+        <Button
+            android:id="@+id/btnAgregarNums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:onClick="Agregar"
+            android:text="Agregar"
+            app:layout_constraintEnd_toEndOf="@+id/edtNumeros"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtNumeros"
+            app:layout_constraintTop_toBottomOf="@+id/edtNumeros" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="52dp"
+            android:onClick="Clear"
+            android:text="Limpiar"
+            app:layout_constraintStart_toEndOf="@+id/btnAgregarNums"
+            app:layout_constraintTop_toBottomOf="@+id/edtNumeros" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="273dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="192dp"
+            android:text="La suma de los ultimos 5 numeros es:"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/twNumsAgregados"
+            app:layout_constraintStart_toStartOf="@+id/twNumsAgregados"
+            app:layout_constraintTop_toBottomOf="@+id/edtNumeros"
+            tools:textColor="#0A3D67" />
+
+        <TextView
+            android:id="@+id/twRespuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:textAlignment="center"
+            android:textColor="#6C1414"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
